@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentions légales — La Clinique du Ski</title>
+  <meta name="description" content="Mentions légales de La Clinique du Ski, Gauthier Ballot, Pays de Gex." />
+  <meta name="robots" content="noindex, follow" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* Styles spécifiques à la page mentions légales */
+    .legal-page {
+      padding-top: var(--nav-height);
+      min-height: 100vh;
+      background: var(--white);
+    }
+
+    .legal-hero {
+      background: var(--blue-dark);
+      padding: var(--space-lg) 0 var(--space-md);
+      text-align: center;
+    }
+
+    .legal-hero h1 {
+      color: var(--white);
+      font-size: clamp(1.8rem, 4vw, 3rem);
+    }
+
+    .legal-hero p {
+      color: rgba(255,255,255,0.6);
+      margin-top: 0.5rem;
+    }
+
+    .legal-body {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: var(--space-lg) var(--space-md);
+    }
+
+    .legal-body h2 {
+      font-size: 1.2rem;
+      margin: var(--space-md) 0 var(--space-xs);
+      color: var(--blue-royal);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .legal-body p,
+    .legal-body li {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .legal-body ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+    }
+
+    .legal-body a {
+      color: var(--blue-royal);
+    }
+
+    /* Champ à compléter mis en valeur */
+    .todo {
+      background: rgba(255, 200, 0, 0.15);
+      border: 1px dashed rgba(200, 150, 0, 0.5);
+      border-radius: 4px;
+      padding: 0.1rem 0.4rem;
+      color: #7a5900;
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .legal-section {
+      border-bottom: 1px solid var(--blue-border);
+      padding-bottom: var(--space-sm);
+      margin-bottom: var(--space-sm);
+    }
+  </style>
+</head>
+
+<body class="legal-page">
+
+  <!-- =========================================================
+       NAVIGATION
+       ========================================================= -->
+  <header role="banner">
+    <nav class="nav" aria-label="Navigation principale">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          La Clinique du Ski
+          <span>Pays de Gex</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html"    class="nav-link">Accueil</a></li>
+          <li><a href="services.html" class="nav-link">Services & Prix</a></li>
+        </ul>
+        <button id="nav-toggle" class="nav-toggle"
+                aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-mobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div id="nav-mobile" class="nav-mobile" role="navigation" aria-label="Menu mobile">
+      <a href="index.html"    class="nav-link">Accueil</a>
+      <a href="services.html" class="nav-link">Services & Prix</a>
+    </div>
+  </header>
+
+
+  <!-- =========================================================
+       EN-TÊTE DE LA PAGE
+       ========================================================= -->
+  <div class="legal-hero">
+    <div class="container">
+      <h1>Mentions légales</h1>
+      <p>Dernière mise à jour : <span class="todo">[à compléter — ex : octobre 2025]</span></p>
+    </div>
+  </div>
+
+
+  <!-- =========================================================
+       CORPS DES MENTIONS LÉGALES
+       ========================================================= -->
+  <main class="legal-body" id="main-content">
+
+    <!-- 1. Éditeur du site -->
+    <section class="legal-section">
+      <h2>1. Éditeur du site</h2>
+      <p>Ce site est édité par :</p>
+      <ul>
+        <li><strong>Nom :</strong> Gauthier Ballot</li>
+        <li><strong>Activité :</strong> Préparation de skis (fartage, affûtage, rebouchage de semelles)</li>
+        <li><strong>Adresse :</strong> <span class="todo">[à compléter — ex : Divonne-les-Bains / Pays de Gex]</span></li>
+        <li><strong>Téléphone :</strong> 06 49 35 16 23</li>
+        <li><strong>Email :</strong> <a href="mailto:gauthier.ballot@icloud.com">gauthier.ballot@icloud.com</a></li>
+        <li><strong>Numéro d'entreprise / SIRET :</strong> <span class="todo">[à compléter si applicable]</span></li>
+      </ul>
+    </section>
+
+    <!-- 2. Hébergeur -->
+    <section class="legal-section">
+      <h2>2. Hébergeur</h2>
+      <ul>
+        <li><strong>Nom :</strong> Vercel Inc.</li>
+        <li><strong>Adresse :</strong> 340 Pine Street, Suite 701, San Francisco, CA 94104, États-Unis</li>
+        <li><strong>Site web :</strong> <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">https://vercel.com</a></li>
+      </ul>
+    </section>
+
+    <!-- 3. Données personnelles & Confidentialité -->
+    <section class="legal-section">
+      <h2>3. Données personnelles &amp; Confidentialité</h2>
+      <p>
+        Ce site ne collecte aucune donnée personnelle à votre insu. Aucun cookie publicitaire ou traceur tiers n'est utilisé.
+      </p>
+      <p>
+        Un simple réglage local (<code>localStorage</code>) permet uniquement de mémoriser votre choix de langue (FR / EN).
+      </p>
+      <p>
+        Si vous me contactez par email ou téléphone, vos coordonnées sont utilisées uniquement pour vous répondre et convenir de la préparation de vos skis.
+      </p>
+    </section>
+
+    <!-- Retour accueil -->
+    <div class="text-center mt-md">
+      <a href="index.html" class="btn btn-primary">← Retour à l'accueil</a>
+    </div>
+
+  </main>
+
+
+  <!-- =========================================================
+       PIED DE PAGE
+       ========================================================= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">La Clinique du Ski</div>
+        <nav class="footer-links" aria-label="Liens de pied de page">
+          <a href="mentions-legales.html">Mentions légales</a>
+        </nav>
+        <p class="footer-copy">© La Clinique du Ski — Gauthier Ballot</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- =========================================================
+       ============================================================
+       CHATBOT ICI
+       ------------------------------------------------------------
+       Emplacement réservé pour le futur widget de chatbot.
+       ============================================================
+       ========================================================= -->
+  <div id="chatbot-placeholder" aria-hidden="true">
+    <!-- Le widget chatbot sera inséré ici -->
+  </div>
+
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    // Menu hamburger simple pour cette page (sans translations.js)
+    const toggle = document.getElementById('nav-toggle');
+    const mobileNav = document.getElementById('nav-mobile');
+    if (toggle && mobileNav) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.classList.toggle('open');
+        mobileNav.classList.toggle('open', open);
+        toggle.setAttribute('aria-expanded', open);
+      });
+    }
+    if (typeof lucide !== 'undefined') lucide.createIcons();
+  </script>
+
+</body>
+</html>

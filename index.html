@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===================== SEO ===================== -->
+  <title>La Clinique du Ski — Fartage & Affûtage dans le Pays de Gex</title>
+  <meta name="description"
+        content="Gauthier Ballot, ancien skieur de compétition, prépare vos skis dans le Pays de Gex : fartage, affûtage à la machine, rebouchage de semelles. Tarifs clairs, service expert." />
+  <meta name="keywords"
+        content="fartage skis, affûtage skis, Pays de Gex, préparation skis, clinique du ski, Gauthier Ballot, rebouchage semelle, entretien skis Gex" />
+  <meta name="author" content="Gauthier Ballot" />
+
+  <!-- ===================== Open Graph ===================== -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="La Clinique du Ski — Fartage & Affûtage, Pays de Gex" />
+  <meta property="og:description" content="Je soigne tes skis. Fartage, affûtage et rebouchage de semelle dans le Pays de Gex par un ancien skieur de compétition." />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <!-- ===================== Google Fonts ===================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ===================== CSS ===================== -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Fond d'image : dégradé bleu affiché si l'image est absente -->
+  <style>
+    /* Cadrage de la photo d'accueil : décalé vers la droite sur desktop pour laisser le champ libre au texte à gauche, centré en haut sur mobile */
+    .hero-bg {
+      background-image: url('images/fond-accueil.jpg');
+      background-position: 70% 15%;
+      background-color: #0D1B3E;
+    }
+
+    @media (max-width: 768px) {
+      .hero-bg {
+        background-position: center 8%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================================================
+       BARRE DE NAVIGATION FIXE
+       ========================================================= -->
+  <header role="banner">
+    <nav class="nav" aria-label="Navigation principale">
+      <div class="nav-inner">
+
+        <!-- Logo -->
+        <a href="index.html" class="nav-logo" aria-label="La Clinique du Ski — Accueil">
+          La Clinique du Ski
+          <span>Pays de Gex</span>
+        </a>
+
+        <!-- Liens (desktop) -->
+        <ul class="nav-links" role="list">
+          <li><a href="index.html"    class="nav-link active" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="services.html" class="nav-link"        data-i18n="nav.services">Services & Prix</a></li>
+        </ul>
+
+        <!-- Sélecteur de langue (desktop) -->
+        <div class="lang-switcher" role="group" aria-label="Sélection de la langue">
+          <button class="lang-btn active" data-lang="fr" aria-pressed="true">FR</button>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <button class="lang-btn"        data-lang="en" aria-pressed="false">EN</button>
+        </div>
+
+        <!-- Bouton hamburger (mobile) -->
+        <button id="nav-toggle" class="nav-toggle"
+                aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-mobile">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div id="nav-mobile" class="nav-mobile" role="navigation" aria-label="Menu mobile">
+      <a href="index.html"    class="nav-link active" data-i18n="nav.home">Accueil</a>
+      <a href="services.html" class="nav-link"        data-i18n="nav.services">Services & Prix</a>
+      <div class="lang-switcher" role="group" aria-label="Sélection de la langue">
+        <button class="lang-btn active" data-lang="fr" aria-pressed="true">FR</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn"        data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- =========================================================
+       HERO — Grande bannière d'accueil
+       ========================================================= -->
+  <section class="hero hero--home" aria-label="Accueil">
+    <!-- Fond photo avec fallback dégradé (défini dans <style> ci-dessus) -->
+    <div class="hero-bg" aria-hidden="true"></div>
+    <!-- Voile dégradé bleu pour garder le texte lisible -->
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <!-- Conteneur des flocons de neige animés -->
+    <div class="snow-container" aria-hidden="true"></div>
+
+    <!-- Contenu principal placé sur le côté gauche sur desktop et en bas sur mobile pour dégager le saut -->
+    <div class="hero-content hero-content--home">
+      <h1 class="hero-title" data-i18n-html="hero.title">La Clinique<br>du Ski</h1>
+      <p  class="hero-subtitle" data-i18n="hero.subtitle">Je soigne tes skis.</p>
+      <p  class="hero-tagline"  data-i18n="hero.tagline">Fartage · Affûtage · Pays de Gex</p>
+      <a href="services.html" class="btn btn-primary" data-i18n="hero.cta">
+        Voir les services &amp; prix
+      </a>
+    </div>
+  </section>
+
+
+  <!-- Séparateur vague hero → section about -->
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z"
+            fill="#FFFFFF"/>
+    </svg>
+  </div>
+
+
+  <main id="main-content">
+
+    <!-- =========================================================
+         SECTION : QUI SUIS-JE
+         ========================================================= -->
+    <section class="section section--white" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-grid">
+
+          <!-- Texte -->
+          <div class="about-text" data-animate>
+            <span class="section-label" data-i18n="about.sectionLabel">À propos</span>
+            <h2 id="about-heading" data-i18n="about.title">QUI SUIS-JE</h2>
+            <p data-i18n-html="about.p1">
+              Je m'appelle <strong>Gauthier Ballot</strong>, ancien skieur de compétition
+              passionné par la glisse depuis toujours. J'ai longtemps chaussé les skis sur les pistes du Pays de Gex et au-delà.
+            </p>
+            <p data-i18n-html="about.p2">
+              Aujourd'hui je mets cette expertise au service des skieurs du Pays de Gex.
+            </p>
+          </div>
+
+          <!-- Carte décorative -->
+          <div class="about-card" data-animate data-animate-delay="2">
+            <div class="about-card-icon" aria-hidden="true">🎿</div>
+            <h3>Gauthier Ballot</h3>
+            <p>Ancien skieur de compétition<br>Pays de Gex</p>
+            <!-- Petits piquets de slalom décoratifs -->
+            <div class="slalom-accents" aria-hidden="true">
+              <div class="slalom-gate"></div>
+              <div class="slalom-gate"></div>
+              <div class="slalom-gate"></div>
+              <div class="slalom-gate"></div>
+              <div class="slalom-gate"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Séparateur vague -->
+    <div class="wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,0 C360,80 1080,0 1440,60 L1440,80 L0,80 Z"
+              fill="#F0F4FF"/>
+      </svg>
+    </div>
+
+
+    <!-- =========================================================
+         SECTION : POURQUOI FAIRE PRÉPARER SES SKIS ?
+         ========================================================= -->
+    <section class="section section--light" aria-labelledby="why-heading">
+      <div class="container">
+
+        <div class="section-header" data-animate>
+          <span class="section-label" data-i18n="why.sectionLabel">Les bénéfices</span>
+          <h2 id="why-heading" data-i18n="why.title">Pourquoi faire préparer ses skis ?</h2>
+        </div>
+
+        <div class="benefits-grid">
+
+          <!-- Carte 1 : Glisse -->
+          <article class="benefit-card" data-animate data-animate-delay="1">
+            <div class="benefit-icon" aria-hidden="true">
+              <i data-lucide="zap"></i>
+            </div>
+            <h3 data-i18n="why.cards.0.title">Plus de glisse</h3>
+            <p  data-i18n="why.cards.0.text">
+              Un fartage régulier, c'est la garantie d'une semelle qui glisse vraiment.
+            </p>
+          </article>
+
+          <!-- Carte 2 : Contrôle & Sécurité -->
+          <article class="benefit-card" data-animate data-animate-delay="2">
+            <div class="benefit-icon" aria-hidden="true">
+              <i data-lucide="crosshair"></i>
+            </div>
+            <h3 data-i18n="why.cards.1.title">Contrôle &amp; Sécurité</h3>
+            <p  data-i18n="why.cards.1.text">
+              Des carres bien affûtées, c'est ta sécurité et un contrôle total dans les virages.
+            </p>
+          </article>
+
+          <!-- Carte 3 : Durée -->
+          <article class="benefit-card" data-animate data-animate-delay="3">
+            <div class="benefit-icon" aria-hidden="true">
+              <i data-lucide="shield"></i>
+            </div>
+            <h3 data-i18n="why.cards.2.title">Skis qui durent</h3>
+            <p  data-i18n="why.cards.2.text">
+              Un entretien régulier protège la semelle et les carres.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Séparateur vague -->
+    <div class="wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,60 C480,0 960,80 1440,20 L1440,80 L0,80 Z"
+              fill="#FFFFFF"/>
+      </svg>
+    </div>
+
+
+    <!-- =========================================================
+         SECTION : COMMENT ÇA MARCHE ?
+         ========================================================= -->
+    <section class="section section--white" aria-labelledby="how-heading">
+      <div class="container">
+
+        <div class="section-header" data-animate>
+          <span class="section-label" data-i18n="how.sectionLabel">Le processus</span>
+          <h2 id="how-heading" data-i18n="how.title">Comment ça marche ?</h2>
+        </div>
+
+        <div class="steps-list">
+
+          <!-- Étape 1 -->
+          <div class="step" data-animate data-animate-delay="1">
+            <div class="step-circle" aria-hidden="true" data-i18n="how.steps.0.num">01</div>
+            <h3 data-i18n="how.steps.0.title">Tu me contactes</h3>
+            <p  data-i18n="how.steps.0.text">
+              Un SMS, un appel, un e-mail — comme tu préfères.
+            </p>
+          </div>
+
+          <!-- Étape 2 -->
+          <div class="step" data-animate data-animate-delay="2">
+            <div class="step-circle" aria-hidden="true" data-i18n="how.steps.1.num">02</div>
+            <h3 data-i18n="how.steps.1.title">Tu passes chez moi</h3>
+            <p  data-i18n="how.steps.1.text">
+              Tu viens déposer tes skis directement chez moi dans le Pays de Gex.
+            </p>
+          </div>
+
+          <!-- Étape 3 -->
+          <div class="step" data-animate data-animate-delay="3">
+            <div class="step-circle" aria-hidden="true" data-i18n="how.steps.2.num">03</div>
+            <h3 data-i18n="how.steps.2.title">Tu récupères, tu glisses</h3>
+            <p  data-i18n="how.steps.2.text">
+              Tes skis sont traités avec soin et prêts à repartir.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- CTA vers services -->
+        <div class="text-center mt-md" data-animate>
+          <a href="services.html" class="btn btn-primary" data-i18n="hero.cta">
+            Voir les services &amp; prix
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================================
+         ACCORDÉON CONTACT
+         ========================================================= -->
+    <section class="contact-section" aria-labelledby="contact-heading">
+      <div class="container">
+
+        <div class="section-header" data-animate>
+          <h2 id="contact-heading" data-i18n="contact.title">Me contacter</h2>
+        </div>
+
+        <div class="contact-accordion" role="region" aria-label="Informations de contact">
+          <!-- Bouton accordéon -->
+          <button class="accordion-toggle"
+                  id="contact-toggle"
+                  aria-expanded="false"
+                  aria-controls="contact-body"
+                  type="button">
+            <span data-i18n="contact.title">Me contacter</span>
+            <span class="accordion-arrow" aria-hidden="true">
+              <i data-lucide="chevron-down"></i>
+            </span>
+          </button>
+
+          <!-- Contenu (caché par défaut) -->
+          <div class="accordion-content" id="contact-body" role="region" aria-labelledby="contact-toggle">
+            <div class="accordion-inner">
+              <div class="accordion-body">
+
+                <!-- Email -->
+                <a class="contact-item" href="mailto:gauthier.ballot@icloud.com" aria-label="Envoyer un email à Gauthier Ballot">
+                  <i data-lucide="mail" aria-hidden="true"></i>
+                  <div>
+                    <span class="contact-label" data-i18n="contact.emailLabel">Email</span>
+                    <span class="contact-value">gauthier.ballot@icloud.com</span>
+                  </div>
+                </a>
+
+                <!-- Téléphone -->
+                <a class="contact-item" href="tel:+33649351623" aria-label="Appeler Gauthier Ballot">
+                  <i data-lucide="phone" aria-hidden="true"></i>
+                  <div>
+                    <span class="contact-label" data-i18n="contact.phoneLabel">Téléphone</span>
+                    <span class="contact-value">06 49 35 16 23</span>
+                  </div>
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       PIED DE PAGE
+       ========================================================= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">La Clinique du Ski</div>
+        <p class="footer-tagline" data-i18n="footer.tagline">
+          L'atelier de préparation des skis du Pays de Gex.
+        </p>
+        <nav class="footer-links" aria-label="Liens de pied de page">
+          <a href="mentions-legales.html" data-i18n="footer.legal">Mentions légales</a>
+        </nav>
+        <p class="footer-copy" data-i18n="footer.copyright">
+          © La Clinique du Ski — Gauthier Ballot
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- =========================================================
+       ============================================================
+       CHATBOT ICI
+       ------------------------------------------------------------
+       Emplacement réservé pour le futur widget de chatbot.
+       Colle le code de ton widget chatbot à l'intérieur de cette div.
+       L'élément est positionné en bas à droite de chaque page.
+       ============================================================
+       ========================================================= -->
+  <div id="chatbot-placeholder" aria-hidden="true">
+    <!-- Le widget chatbot sera inséré ici -->
+  </div>
+
+
+  <!-- =========================================================
+       SCRIPTS
+       ========================================================= -->
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <!-- Traductions -->
+  <script src="js/translations.js"></script>
+  <!-- Logique principale -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
